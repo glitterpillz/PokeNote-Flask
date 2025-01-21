@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+.profileContainer {
+    font-family: "Baloo Paaji 2", serif;
+    background-color: transparent;
+    position: relative;
+    border-radius: 10px;
+    margin-top: 40px;
+}
+
+.bannerPic {
+    width: 100%;
+    height: 240px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.profileBox {
+    z-index: 1;
+}
+
+.profileHeader {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Atma", serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #b3bdd7;
+}
+
+.usernameDiv {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.friendButton, .messageButton {
+    width: 140px;
+    font-family: "Atma", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #aa5d93;
+    color: #f7d6ed;
+    border: 1px solid #eac0dd;
+    border-radius: 3px;
+    position: relative;
+    bottom: 100px;
+    cursor: pointer;
+}
+
+.friendButton:hover, .messageButton:hover {
+    cursor: pointer;
+    background-color: #81456f;
+}
+
+.profilePic {
+    border: 2px solid #b3bdd7;
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    margin-top: 90px;
+}
+
+.profileDetails {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemonContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.pokemonPartyHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.pokemonPartyHeader img {
+    width: 80px;
+}
+
+.pokemonBox {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Create responsive columns */
+    gap: 20px;
+    background-image: linear-gradient(to bottom right, #86c9dc, #c673c2);    
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.noPokemon {
+    font-size: 1.4rem;
+    color: #fefbe2;
+    background-image: linear-gradient(to bottom right, #86c9dc, #c673c2);    
+    width: 90%;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0;
+}
+
+.noEntries {
+    font-size: 1.4rem;
+    color: #fefbe2;
+    margin: 0;
+}
+
+.pokemonCard {
+    text-align: center;
+    background-color: #50587e;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px #0000001a;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pokemonImg {
+    width: 80%;
+    background-color: #6f77a1;
+    padding: 5px 5px 0 5px;
+    border-radius: 8px;
+    margin-top: 10px
+}
+
+.image {
+    width: 100%;
+}
+
+.h3 {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-weight: 500;
+    margin: 10px 0 30px 0;
+    background-color: #19264b;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+.cardBody {
+    color: #fefbe2;
+    font-size: 1.2rem;
+}
+
+.name {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 10px 0 0 0;
+}
+
+.nickname {
+    margin: 0;
+}
+
+.levelBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 0 10px 0;
+    height: 20px;
+}
+
+.levelBox label {
+    font-weight: bold;
+}
+
+
+.journalContainer {
+    margin: 40px 0 30px 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.journalBodyContainer {
+    background-image: linear-gradient(to bottom right, #86c9dc, #c673c2);    
+    padding: 40px 20px 20px 20px;
+    border-radius: 10px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.journalCard {
+    background-color: #8e6b98;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    width: 100%;
+    min-width: 600px;
+}
+
+.journalHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #5d3363;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 80px;
+    color: #e0c5e7;
+}
+
+.h2 {
+    font-family: "Atma", serif;
+}
+
+.journalBody {
+    font-size: 1.3rem;
+    margin-top: 0;
+    padding: 0px 15px;
+    border-radius: 5px;
+    color: #f4e2f8;
+    display: flex;
+    flex-direction: column;
+}
+
+.date {
+    font-size: 1.3rem;
+}
+
+.journalImgBox {
+    width: 90%;
+    align-self: center;
+}
+
+.journalImgBox img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.loading, .errors {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}
+

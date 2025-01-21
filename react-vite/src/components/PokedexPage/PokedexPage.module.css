@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+body {
+    background-color: #30385f;
+}
+
+.mainNavContainer {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navContainer {
+    width: 100%;
+}
+
+.bannerImg {
+    width: 480px;
+    margin-bottom: 20px;
+}
+
+.searchForm {
+    font-family: "Baloo Paaji 2", serif;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchForm input {
+    width: 300px;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 8px;
+    background-color: #cacee2;
+    border: 3px solid #1e2442;
+    color: #333;
+}
+
+.searchForm button {
+    width: 40%;
+    padding: 5px;
+    font-family: "Atma", serif;
+    font-size: 20px;
+    font-weight: 600;
+    background-color: #1e2442;
+    color: #cacee2;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.resultsContainer {
+    font-family: "Atma", serif;
+    color: #fefbe2;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+    justify-items: center;
+    padding: 40px 30px;
+    background-image: linear-gradient(to bottom right, #86c9dc, #c673c2);    
+    width: 85%;
+    justify-self: center;
+    margin-top: 30px;
+    border-radius: 12px;
+    width: 90%;
+}
+
+.pokemonCard {
+    background-color: #50587e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 270px;
+    overflow: hidden; 
+    cursor: pointer;
+}
+  
+
+.pokemonCard img {
+    width: 80%;
+    height: auto;
+    background-color: #6f77a1;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.typesContainer {
+    display: flex;
+    gap: 10px;
+    font-family: "Baloo Paaji 2", serif;
+    color: #fefbe2;
+}
+
+h3 {
+    font-size: 30px;
+    margin: 5px;
+}
+
+.pokemonType {
+    color: #2b2a2a;
+    padding: 3px 6px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 1rem;
+    margin: 5px;
+    min-width: 50px;
+}
+
+.loading, .errors {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}
+
+
+.scrollTopButton {
+    position: fixed;
+    top: 30px; 
+    right: 25px;
+    z-index: 1000;
+}
+
+.scrollTopButton.show {
+    display: block; 
+}
+
+.scrollTopButton {
+    transition: opacity 0.3s ease;
+}

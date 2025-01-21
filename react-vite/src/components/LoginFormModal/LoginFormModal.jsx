@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { thunkLogin } from "../../redux/session";
 import { useDispatch } from "react-redux";
 import { useModal } from "../../context/Modal";
-import "./LoginForm.css";
+import * as sessionActions from "../../redux/session";
+import login from "./LoginForm.module.css";
 
-function LoginFormModal() {
+function LoginFormModal({ navigate }) {
   const dispatch = useDispatch();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -15,46 +15,49 @@ function LoginFormModal() {
     e.preventDefault();
 
     const serverResponse = await dispatch(
-      thunkLogin({
-        email,
-        password,
-      })
+      sessionActions.login({ email, password })
     );
 
-    if (serverResponse) {
-      setErrors(serverResponse);
+    if (serverResponse.type === "session/login/rejected") {
+      setErrors(serverResponse.payload || {});
     } else {
+      navigate("/");
       closeModal();
     }
   };
 
   return (
-    <>
-      <h1>Log In</h1>
-      <form onSubmit={handleSubmit}>
-        <label>
-          Email
+    <div className={login.loginModalContainer}>
+      <h1 className={login.h1}>Log In</h1>
+      <form className={login.form} onSubmit={handleSubmit}>
+        <div className={login.inputBox}>
+          <label>Email</label>
           <input
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            className={login.formInput}
             required
           />
-        </label>
-        {errors.email && <p>{errors.email}</p>}
-        <label>
-          Password
+        </div>
+        {errors.email && <p className={login.errorText}>{errors.email}</p>}
+        <div className={login.inputBox}>
+          <label>Password</label>
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            className={login.formInput}
             required
           />
-        </label>
-        {errors.password && <p>{errors.password}</p>}
-        <button type="submit">Log In</button>
+        </div>
+        {errors.password && <p className={login.errorText}>{errors.password}</p>}
+        {errors.general && <p className={login.errorText}>{errors.general}</p>}
+        <button type="submit" className={login.loginSubmit}>
+          Submit
+        </button>
       </form>
-    </>
+    </div>
   );
 }
 

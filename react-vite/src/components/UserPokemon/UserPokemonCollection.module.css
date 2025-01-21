@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+
+.mainBodyContainer {
+    font-family: "Baloo Paaji 2", serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #9eb1e4;
+    font-family: "Atma", serif;
+    font-size: 1.2rem;
+    background-color: #19264b;
+    padding: 10px 20px;
+    margin: 50px 0;
+    align-self: center;
+    border-radius: 10px;
+}
+
+.h1 {
+    margin: 0;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 60%;
+    gap: 30px;
+}
+
+.pokemonCard {
+    background-color: #50587e;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    color: #fefbe2;
+    border-radius: 8px;
+}
+
+.imageBox {
+    width: 150px;
+    padding: 10px 0 0 15px;
+}
+
+.image {
+    width: 100%;
+}
+
+.bodyBox {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.bodyHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.h2 {
+    margin: 0;
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+}
+
+.viewButton {
+    padding: 5px 10px;
+    background-color: #19264b;
+    color: #cacee2;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: "Atma", serif;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.bodyInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.bodyDiv {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bodyDiv label {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.bodyDiv p {
+    margin: 0;
+    font-size: 1.4rem;
+}
+
+.loading, .errors {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}

@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.navbar {
+    width: 100%;
+}
+
+.pageDiv {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}
+
+.mainDetailsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #8e6b98;
+    width: 60%;
+    font-family: "Baloo Paaji 2", serif;
+    border-radius: 10px;
+}
+
+.headerBox {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #5d3363;
+    color: #e0c5e7;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.h1 {
+    font-family: "Atma", serif;
+    padding-left: 20px;
+}
+
+.date {
+    font-size: 1.6rem;
+    padding-right: 20px;
+}
+
+.detailsContainer {
+    width: 90%;
+    font-size: 1.4rem;
+    padding: 20px 0;
+}
+
+.usernameDiv {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.label {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+.contentDiv p, .photoDiv p {
+    margin-top: 0;
+}
+
+.photo {
+    width: 100%;
+    margin: 5px 0;
+    border-radius: 5px;
+}
+
+.deleteButton {
+    padding: 5px 10px;
+    font-family: "Atma", serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background-color: #aa5d93;
+    color: #eac0dd;
+    border: 1px solid #eac0dd;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.buttonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.button {
+    padding: 5px 10px;
+    font-family: "Atma", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #aa5d93;
+    color: #eac0dd;
+    border: 1px solid #eac0dd;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #81456f;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}

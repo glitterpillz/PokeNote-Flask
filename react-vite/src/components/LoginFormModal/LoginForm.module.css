@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+.loginModalContainer {
+    background-color: #50587e;
+    width: 400px;
+    height: auto;
+    color: #fefbe2;
+    padding: 5px 20px;
+    font-family: "Baloo Paaji 2", serif;
+    border: 3px solid #fefbe2;
+    border-radius: 8px;
+}
+
+.h1 {
+    font-size: 3rem;
+    font-family: "Atma", serif;
+    color: #ffd444;
+    text-align: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin: 10px 20px;
+    font-size: 1.8rem;
+}
+
+.inputBox {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.formInput {
+    background-color: #fefbe2;
+    border-radius: 5px;
+    border: 3px solid #1e2442;
+    font-size: 1.2rem;
+    width: 200px;
+}
+
+.loginSubmit {
+    width: 40%;
+    align-self: center;
+    margin: 30px 0;
+    padding: 5px;
+    font-family: "Atma", serif;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: #1e2442;
+    color: #cacee2;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.errorText {
+    color: #ef88bb;
+    font-size: 1.3rem;
+    margin: 0;
+}

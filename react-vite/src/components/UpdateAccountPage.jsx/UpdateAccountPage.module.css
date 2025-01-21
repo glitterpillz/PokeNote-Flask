@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+
+.updateMainContainer {
+    font-family: "Baloo Paaji 2", serif;
+    position: relative;
+}
+
+.updateBodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-family: "Atma", serif;
+    color: #ffd444;
+    font-size: 3rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    width: 70%;
+    background-color: #50587e;
+    color: #fefbe2;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.formField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.input {
+    width: 240px;
+    height: 30px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    background-color:#fefbe2;
+}
+
+.fileFormField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+}
+
+.button {
+    width: 40%;
+    align-self: center;
+    margin: 30px 0;
+    padding: 5px;
+    font-family: "Atma", serif;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: #1e2442;
+    color: #cacee2;
+    border-radius: 8px;
+}
+
+.fileInput {
+    display: none;
+}
+  
+.customFileButton {
+    font-size: 1.2rem;
+    padding: 5px 10px;
+    background-color: #1e2442;
+    color: #cacee2;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    font-family: "Baloo Paaji 2", serif;
+}
+
+.fileName {
+    font-size: 1rem;
+    margin-left: 10px;
+    color: #fefbe2;
+}
+
+.fileButtonField {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    font-size: 1rem;
+}
+
+.footerButtons {
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.backButton, .deleteButton {
+    background-color: transparent;
+    border: none;
+    font-family: "Atma", serif;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0;
+}
+
+.backButton {
+    color: #ffd444;
+    font-size: 40px;
+    display: flex;
+    gap: 10px
+}
+
+.deleteButton {
+    color: #f27442;
+    font-size: 25px;
+    align-self: flex-start;
+}
+
+.validateError {
+    color: #ef88bb;
+    font-size: 1.3rem;
+    margin: 0;
+}

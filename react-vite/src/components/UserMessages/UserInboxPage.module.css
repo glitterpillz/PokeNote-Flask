@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+.mainBoxContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header {
+    font-family: "Atma", serif;
+    color: #ffd444;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.flexContainer {
+    display: flex;
+    width: 800px;
+    border: 2px solid #67709c;
+    border-radius: 10px;
+    margin-top: 65px;
+}
+
+.buttonsContainer {
+    flex: 0 0 auto; 
+    width: 10%; 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+    padding: 30px 10px 30px 30px;
+    background-color: #67709c;
+}
+
+.button {
+    background-color: transparent;
+    border: none;
+    font-family: "Atma", serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #23283c;
+}
+
+.button:hover {
+    cursor: pointer;
+    color: #ffd444;
+}
+
+.messageContainer {
+    font-family: "Baloo Paaji 2", serif;
+    font-size: 1.3rem;
+    padding: 40px 30px 20px 20px;
+    background-image: linear-gradient(to bottom right, #86c9dc, #c673c2);
+    width: 85%;
+}
+
+.messageBox {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.messageBodyContainer {
+    border: 2px solid #30385f;
+    border-radius: 8px;
+    width: 100%;
+}
+
+.headerDiv {
+    display: flex;
+    flex-direction: column;
+    background-color: #30385f;
+    color: #fefbe2;
+    padding: 5px 15px;
+    font-size: 1.2rem;
+}
+
+.toFromRow {
+    display: flex;
+    gap: 30px;
+}
+
+.toFromRow p {
+    margin: 0;
+}
+
+.dateDeleteRow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date {
+    margin: 0;
+}
+
+.deleteButton, .deleteAllButton {
+    padding: 3px 5px;
+    background-color: #ad5aa9;
+    border: none;
+    border-radius: 5px;
+    color: #fefbe2;
+    cursor: pointer;
+    font-family: "Baloo Paaji 2", serif;
+    margin-bottom: 5px;
+}
+
+.deleteButton:hover, .deleteAllButton:hover {
+    background-color: #8e4a8a;
+}
+
+.deleteAllButton {
+    position: relative;
+    bottom: 20px;
+    left: 70px;
+}
+
+.messageBody {
+    background-color: #67709c;
+    padding: 5px 10px;
+    font-size: 1.2rem;
+}
+
+.imageBox img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.pikachu {
+    position: absolute;
+    width: 480px;
+    right: -50px;
+}
+
+.loading, .errors {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}
+
+.noMessages {
+    margin-left: 20px;
+    color: #a13881;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    font-weight: 500;
+}
