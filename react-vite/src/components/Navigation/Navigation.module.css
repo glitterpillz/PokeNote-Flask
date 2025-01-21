@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+
+.mainNavContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  background-color: #30385f;
+  height: 60px;
+}
+
+.sidePanel {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #23283c;
+  overflow-x: hidden;
+  transition: 0.3s;
+  padding-top: 60px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.open {
+  width: 250px;
+}
+
+.navList {
+  font-family: "Baloo Paaji 2", serif;
+  font-size: 24px;
+  list-style-type: none;
+  padding: 0 30px;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #fefbe2;
+  display: block;
+  transition: 0.3s;
+  margin-bottom: 16px;
+}
+
+.navLink:hover {
+  cursor: pointer;
+  color: #8cfbeb;
+}
+
+.sidePanelCloseBtn {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 36px;
+  background: none;
+  border: none;
+  color: #fefbe2;
+  cursor: pointer;
+}
+
+.sidePanelOpenBtn {
+  font-size: 40px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #fefbe2;
+  border: none;
+  padding: 10px 15px;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+}
+
+.sidePanelOpenBtn:hover {
+  background-color: transparent;
+}
+
+.profileButton {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  gap: 40px;
+  margin-right: 20px;
+}
+
+.sidePanel nav img {
+  width: 220px;
+  align-self: center;
+  padding: 20px 0 0 10px;
+}
+
+.dropdownButton {
+  margin-top: 30px;
+  background-color: transparent;
+  border: none;
+  font-family: "Baloo Paaji 2", serif;
+  font-size: 1.2rem;
+  color: #fefbe2;
+  cursor: pointer;
+}
+
+.dropdownButton:hover {
+  font-size: 1.3rem;
+}
+
+.dropdownMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+  position: fixed;
+  right: 90px;
+  top: 80px;
+  width: 80px;
+  color: #fefbe2;
+  background-color: #23283c;
+  border-radius: 10px;
+  padding: 15px 20px;
+  min-width: 120px;
+  z-index: 10;
+}
+
+.dropButton {
+  background-color: transparent;
+  border: none;
+  color: #fefbe2;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.dropButton:hover {
+  color: #8cfbeb;
+}

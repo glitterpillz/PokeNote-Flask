@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+.mainBodyContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Baloo Paaji 2", serif;
+}
+
+.headerBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    font-family: "Atma", serif;
+    color: #ffd444;
+    font-size: 3rem;
+}
+
+.headerButton {
+    align-self: center;
+    padding: 10px 20px;
+    font-family: "Atma", serif;
+    font-size: 25px;
+    font-weight: 600;
+    background-color: #1e2442;
+    color: #cacee2;
+    border-radius: 8px;
+}
+
+.entriesContainer {
+    margin: 40px 0;
+    padding: 20px 60px;
+    background-image: linear-gradient(to bottom right, #86c9dc, #c673c2);    
+    border-radius: 10px;
+    width: 70%;
+}
+
+.entryCardBox {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 50px;
+    margin: 40px 0;
+}
+
+.entryCard {
+    border: 3px solid #5d3363;
+    border-radius: 8px;
+    width: 90%;
+    background-color: #8e6b98;
+    display: flex;
+    flex-direction: column;
+}
+
+.entryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    background-color: #5d3363;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    height: 80px;
+    color: #e0c5e7;
+}
+
+.h2 {
+    font-family: "Atma", serif;
+}
+
+.entryDate {
+    font-size: 1.3rem;
+}
+
+.contentBox {
+    padding: 0 40px;
+}
+
+.h5 {
+    margin: 15px 0 0 0;
+    font-size: 1.5em;
+    color: #27112a;
+}
+
+.contentBox p {
+    font-size: 1.3rem;
+    margin-top: 0;
+    background-color: #b599be;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.photoBox {
+    width: 90%;
+    align-self: center;
+    margin: 20px 0;
+}
+
+.entryPhoto {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.button {
+    align-self: flex-start;
+    padding: 5px 10px;
+    margin: 20px 0 0 40px;
+    font-family: "Atma", serif;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: #aa5d93;
+    color: #eac0dd;
+    border: 1px solid #eac0dd;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #81456f;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 3px 8px;
+}
+
+.loading, .errors {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}
+
+.scrollTopButton {
+    position: fixed;
+    top: 30px; 
+    right: 30px;
+    z-index: 1000;
+}
+
+.scrollTopButton.show {
+    display: block; 
+}
+
+.scrollTopButton {
+    transition: opacity 0.3s ease;
+}

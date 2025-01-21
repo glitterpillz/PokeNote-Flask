@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Baloo Paaji 2", serif;
+    width: 100%;
+}
+
+.bannerImg {
+    width: 115%;
+    margin-bottom: 0;
+    margin-top: 30px;
+}
+
+.mainHeader {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h4 {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2.8rem;
+    text-align: center;
+    width: 90%;
+    margin-top: 40px;
+}
+
+.headerMessage {
+    color: #9099c4;
+    margin: 0 0 10px 0;
+    padding: 10px 20px;
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 40px;
+    font-weight: bold;
+    background-color: #1e2442;
+    border-radius: 8px;
+}
+
+.mainBodyContainer {
+    background-image: linear-gradient(to bottom right, #86c9dc, #c673c2);
+    border-radius: 12px;
+    padding: 30px;
+    width: 70%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+}
+
+.entryCard {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    background-color: #8e6b98;
+    border-radius: 10px;
+    margin: 15px 0;
+}
+
+.mainHeaderContainer {
+    display: flex;
+    background-color: #5d3363;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.profilePicBox {
+    background-color: #5d3363;
+    border-top-left-radius: 10px;
+    width: 70px;
+    padding: 20px 20px 10px 20px;
+}
+
+.profilePicBox img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    width: 75%;
+    color: #fefbe2;
+}
+
+.profileLink {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fefbe2;
+    padding: 35px 0 0 10px;
+}
+
+.timestamp {
+    font-size: 1.4rem;
+    padding-top: 15px;
+}
+
+.entryInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 0 50px;
+    margin-bottom: 20px;
+}
+
+.h1 {
+    font-family: "Atma", serif;
+    color: #ffd444;
+    font-size: 2rem;
+    margin: 20px 0 0 0;
+}
+
+.entryBody {
+    font-size: 1.6rem;
+    color: #fefbe2;
+    margin-top: 5px;
+}
+
+.entryPic {
+    border-radius: 8px;
+}
+
+.reportButton, .reviewButton {
+    margin-top: 20px;
+    align-self: flex-end;
+    background-color: transparent;
+    border: none;
+    color: #5d3363;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.reportButton:hover, .reviewButton:hover {
+    color: #e79ade;
+}
+
+.scrollTopButton {
+    position: fixed;
+    top: 30px; 
+    right: 30px;
+    z-index: 1000;
+}
+
+.scrollTopButton.show {
+    display: block; 
+}
+
+.scrollTopButton {
+    transition: opacity 0.3s ease;
+}
+
+.loading, .errors {
+    color: #ffd444;
+    font-family: "Atma", serif;
+    font-size: 2rem;
+    text-align: center;
+    margin: 50px;
+}

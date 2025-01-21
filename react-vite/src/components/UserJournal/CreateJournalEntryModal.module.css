@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Atma:wght@300;400;500;600;700&family=Baloo+Paaji+2:wght@400..800&display=swap");
+
+.mainFormContainer {
+    font-family: "Baloo Paaji 2", serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+    font-size: 1.3rem;
+    width: 100%;
+    background-color: #30385f;
+    color: #fefbe2;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border: 2px solid #fefbe2;
+}
+
+.formHeading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    align-items: flex-start;
+    font-size: 1.2rem;
+}
+
+.inputBox {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+}
+
+.formInput {
+    height: 25px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid #fefbe2;
+    color: #fefbe2;
+    font-size: 1.2rem;
+    width: 200px;
+}
+
+
+.contentBox, .accomplishBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.formLabel {
+    font-weight: 600;
+}
+
+.contentTextArea {
+    height: 80px;
+    font-size: 1.3rem;
+    font-family: "Baloo Paaji 2", serif;
+    color: #fefbe2;
+    padding: 10px;
+    border: 2px solid #fefbe2;
+    border-radius: 8px;
+    resize: none;
+    background-color: #50587e;
+}
+
+.accomplishTextArea {
+    height: 50px;
+    padding: 10px;
+    border: 2px solid #fefbe2;
+    border-radius: 5px;
+    color: #fefbe2;
+    background-color: transparent;
+    resize: none;
+    font-size: 1.3rem;
+    font-family: "Baloo Paaji 2", serif;
+    background-color: #50587e;
+}
+
+.photoBox {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.photoLabelBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.fileButtonField {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.customFileButton {
+    font-size: 1.2rem;
+    background-color: #1e2442;
+    color: #cacee2;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    padding: 8px 12px;
+    font-family: "Baloo Paaji 2", serif;
+}
+
+.fileName {
+    font-size: 1.2rem;
+}
+
+.privateBox {
+    display: flex;
+    gap: 20px;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 0;
+}
+
+
+.button {
+    align-self: center;
+    padding: 5px 15px;
+    font-family: "Atma", serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: #1e2442;
+    color: #cacee2;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+
+.mewPic {
+    position: absolute;
+    left: 410px;
+    bottom: 530px;
+}
+
+.mewPic img {
+    width: 180px;
+}
+
+.butterPic {
+    position: absolute;
+    left: 400px;
+    bottom: 860px;
+}
+
+.butterPic img {
+    width: 280px;
+}
+
+.hiddenFileInput {
+    display: none;
+}
+
+.error {
+    color: #ef88bb;
+    font-size: 1.2rem;
+}
