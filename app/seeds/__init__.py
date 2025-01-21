@@ -11,19 +11,19 @@ seed_commands = AppGroup('seed')
 @seed_commands.command('all')
 def seed():
     if environment == 'production':
-        undo_user_pokemon()
         undo_journal_entries()
+        undo_user_pokemon()
         undo_pokemon()
         undo_users()
     seed_users()
     seed_pokemon()
-    seed_journal_entries()
     seed_user_pokemon()
+    seed_journal_entries()
 
 
 @seed_commands.command('undo')
 def undo():
-    undo_user_pokemon()
     undo_journal_entries()
+    undo_user_pokemon()
     undo_pokemon()
     undo_users()

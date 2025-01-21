@@ -1,19 +1,13 @@
-from .db import db, environment, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from .message import Message
-from sqlalchemy.schema import MetaData
-
-metadata = MetaData(schema="public")
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
 
-    if environment == 'production':
-        __table_args__ = {'schema': "public"}
-
-    # if environment == "production":
-    #     __table_args__ = {'schema': SCHEMA}
+    if environment == "production":
+        __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
     username = db.Column(db.String(40), nullable=False, unique=True)
@@ -27,37 +21,37 @@ class User(db.Model, UserMixin):
     banner_url = db.Column(db.String(255), nullable=True, default="https://i.ibb.co/QKPFB1t/placeholder-banner.jpg")
 
     pokemon_collection = db.relationship(
-        add_prefix_for_prod('UserPokemon'),
+        'UserPokemon',
         back_populates='user',
         cascade='all, delete-orphan'
     )
 
     journal_entries = db.relationship(
-        add_prefix_for_prod('JournalEntry'),
+        'JournalEntry',
         back_populates='user',
         cascade='all, delete-orphan'
     )
 
     comments = db.relationship(
-        add_prefix_for_prod('Comment'),
+        'Comment',
         back_populates='user',
         cascade='all, delete-orphan'
     )
 
     likes = db.relationship(
-        add_prefix_for_prod('Like'),
+        'Like',
         back_populates='user',
         cascade='all, delete-orphan'
     )
 
     sent_messages = db.relationship(
-        add_prefix_for_prod('Message'),
+        'Message',
         foreign_keys=[Message.sender_id],
         back_populates='sender'
     )
 
     received_messages = db.relationship(
-        add_prefix_for_prod('Message'),
+        'Message',
         foreign_keys=[Message.receiver_id],
         back_populates='receiver'
     )
