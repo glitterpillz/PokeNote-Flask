@@ -1,33 +1,26 @@
-from .db import db, environment, SCHEMA, add_prefix_for_prod
-from sqlalchemy.schema import MetaData
-
-metadata = MetaData(schema="public")
+from .db import db, environment, SCHEMA
 
 class Comment(db.Model):
     __tablename__ = 'comments'
 
     if environment == 'production':
-        __table_args__ = {'schema': "public"}
-
-
-    # if environment == 'production':
-    #     __table_args__ = {'schema': SCHEMA}
+        __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.String(500), nullable=False)
     timestamp = db.Column(db.DateTime, nullable=False, default=db.func.current_timestamp())
 
-    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(f'{SCHEMA}.users.id' if environment == "production" else 'users.id'), nullable=False)
 
-    journal_entry_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('journal_entries.id')), nullable=False)
+    journal_entry_id = db.Column(db.Integer, db.ForeignKey(f'{SCHEMA}.journal_entries.id' if environment == "production" else 'journal_entries.id'), nullable=False)
 
     user = db.relationship(
-        add_prefix_for_prod('User'),
+        'User',
         back_populates='comments'
     )
 
     journal_entry = db.relationship(
-        add_prefix_for_prod('JournalEntry'), 
+        'JournalEntry', 
         back_populates='comments'
     )
 

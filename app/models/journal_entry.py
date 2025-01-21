@@ -1,20 +1,13 @@
-from .db import db, environment, SCHEMA, add_prefix_for_prod
-from sqlalchemy.schema import MetaData
-
-metadata = MetaData(schema="public")
+from .db import db, environment, SCHEMA
 
 class JournalEntry(db.Model):
     __tablename__ = 'journal_entries'
 
     if environment == 'production':
-        __table_args__ = {'schema': "public"}
-
-
-    # if environment == 'production':
-    #     __table_args__ = {'schema': SCHEMA}
+        __table_args__ = {'schema': SCHEMA}
 
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey(add_prefix_for_prod('users.id')), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(f'{SCHEMA}.users.id' if environment == "production" else 'users.id'), nullable=False)
     title = db.Column(db.String(100), nullable=False)
     content = db.Column(db.Text, nullable=False)
     accomplishments = db.Column(db.Text, nullable=True)
@@ -23,18 +16,18 @@ class JournalEntry(db.Model):
     is_private = db.Column(db.Boolean, nullable=True, default=False)
 
     user = db.relationship(
-        add_prefix_for_prod('User'),
+        'User',
         back_populates='journal_entries'
     )
 
     comments = db.relationship(
-        add_prefix_for_prod('Comment'),
+        'Comment',
         back_populates='journal_entry',
         cascade='all, delete-orphan'
     )
 
     likes = db.relationship(
-        add_prefix_for_prod('Like'),
+        'Like',
         back_populates='journal_entry',
         cascade='all, delete-orphan'
     )
