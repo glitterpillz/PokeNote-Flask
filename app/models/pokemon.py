@@ -1,7 +1,7 @@
-from .db import db, environment, SCHEMA
+from .db import db, environment, SCHEMA, add_prefix_for_prod
 
 class Pokemon(db.Model):
-    __tablename__='pokemons'
+    __tablename__= add_prefix_for_prod('pokemons')
 
     if environment == 'production':
         __table_args__={'schema': SCHEMA}
