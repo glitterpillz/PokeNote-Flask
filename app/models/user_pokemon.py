@@ -1,8 +1,8 @@
-from .db import db, environment, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA
 
 
 class UserPokemon(db.Model):
-    __tablename__ = add_prefix_for_prod('user_pokemon')
+    __tablename__ = 'user_pokemon'
 
     if environment == 'production':
         __table_args__ = {'schema': SCHEMA}
