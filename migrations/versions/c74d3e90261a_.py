@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: 9547bd2a2412
+Revision ID: c74d3e90261a
 Revises: 
-Create Date: 2025-01-22 13:14:56.912552
+Create Date: 2025-01-22 13:39:15.194694
 
 """
 import os
@@ -14,7 +14,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '9547bd2a2412'
+revision = 'c74d3e90261a'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -118,7 +118,6 @@ def upgrade():
         op.execute(f"ALTER TABLE user_pokemon SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE comments SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE likes SET SCHEMA {SCHEMA};")
-
 
 
 def downgrade():
