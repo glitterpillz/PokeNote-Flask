@@ -1,7 +1,7 @@
-from .db import db, environment, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA
 
 class Comment(db.Model):
-    __tablename__ = add_prefix_for_prod('comments')
+    __tablename__ = 'comments'
 
     if environment == 'production':
         __table_args__ = {'schema': SCHEMA}

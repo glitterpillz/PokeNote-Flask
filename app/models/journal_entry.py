@@ -1,7 +1,7 @@
-from .db import db, environment, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA
 
 class JournalEntry(db.Model):
-    __tablename__ = add_prefix_for_prod('journal_entries')
+    __tablename__ = 'journal_entries'
 
     if environment == 'production':
         __table_args__ = {'schema': SCHEMA}

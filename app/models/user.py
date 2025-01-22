@@ -1,10 +1,10 @@
-from .db import db, environment, SCHEMA, add_prefix_for_prod
+from .db import db, environment, SCHEMA
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_login import UserMixin
 from .message import Message
 
 class User(db.Model, UserMixin):
-    __tablename__ = add_prefix_for_prod('users')
+    __tablename__ = 'users'
 
     if environment == "production":
         __table_args__ = {'schema': SCHEMA}
