@@ -1,16 +1,20 @@
-"""initial migration
+"""empty message
 
-Revision ID: 8242cbafd04f
+Revision ID: d62dc8d824d6
 Revises: 
-Create Date: 2025-01-21 19:24:32.968184
+Create Date: 2025-01-22 12:47:06.171546
 
 """
+import os
+environment = os.environ.get("FLASK_ENV")
+SCHEMA = os.environ.get("SCHEMA")
+
 from alembic import op
 import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '8242cbafd04f'
+revision = 'd62dc8d824d6'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -105,6 +109,15 @@ def upgrade():
     sa.PrimaryKeyConstraint('id')
     )
     # ### end Alembic commands ###
+    if environment == "production":
+        op.execute(f"ALTER TABLE pokemons SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE journey_entries SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE messages SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE pokemon_stats SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE user_pokemon SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE comments SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE likes SET SCHEMA {SCHEMA};")
 
 
 def downgrade():
