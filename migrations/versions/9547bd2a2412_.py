@@ -1,8 +1,8 @@
 """empty message
 
-Revision ID: d62dc8d824d6
+Revision ID: 9547bd2a2412
 Revises: 
-Create Date: 2025-01-22 12:47:06.171546
+Create Date: 2025-01-22 13:14:56.912552
 
 """
 import os
@@ -14,7 +14,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = 'd62dc8d824d6'
+revision = '9547bd2a2412'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -112,12 +112,13 @@ def upgrade():
     if environment == "production":
         op.execute(f"ALTER TABLE pokemons SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE users SET SCHEMA {SCHEMA};")
-        op.execute(f"ALTER TABLE journey_entries SET SCHEMA {SCHEMA};")
+        op.execute(f"ALTER TABLE journal_entries SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE messages SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE pokemon_stats SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE user_pokemon SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE comments SET SCHEMA {SCHEMA};")
         op.execute(f"ALTER TABLE likes SET SCHEMA {SCHEMA};")
+
 
 
 def downgrade():
