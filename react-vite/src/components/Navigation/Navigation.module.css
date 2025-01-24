@@ -136,9 +136,7 @@
 }
 
 .footContainer {
-  justify-self: center;
-  position: relative;
-  top: 300px;
+  padding: 22px;
   display: flex;
   gap: 20px;
 }
