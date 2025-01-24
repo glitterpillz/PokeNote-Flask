@@ -100,19 +100,33 @@ def get_inbox():
     
 
 # GET USER SENT BOX
+# @message_routes.route('/sent')
+# @login_required
 @message_routes.route('/sent')
 @login_required
 def get_sent_box():
     sent_box = Message.query.filter(
         Message.sender_id == current_user.id,
-        Message.receiver_id != current_user.id,
-        Message.is_deleted_by_sender == False
+        Message.is_deleted_by_sender == False,
+        Message.receiver_id != current_user.id
     ).all()
 
     if sent_box:
         return jsonify([message.to_dict() for message in sent_box])
     else:
-        return jsonify({'error': f'No messages found for User {current_user.id}.'}), 404
+        return jsonify({'error': f'No sent messages found for User {current_user.id}.'}), 404
+
+# def get_sent_box():
+#     sent_box = Message.query.filter(
+#         Message.sender_id == current_user.id,
+#         Message.receiver_id != current_user.id,
+#         Message.is_deleted_by_sender == False
+#     ).all()
+
+#     if sent_box:
+#         return jsonify([message.to_dict() for message in sent_box])
+#     else:
+        # return jsonify({'error': f'No messages found for User {current_user.id}.'}), 404
       
 
 # GET DELETED MESSAGES
