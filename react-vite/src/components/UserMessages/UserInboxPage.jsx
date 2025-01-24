@@ -13,23 +13,17 @@ const UserInboxPage = () => {
     const { setModalContent } = useModal();
     
 
-    const { inbox, sentBox, deleteBox, loading, errors } = useSelector((state) => state.message);
+    const { inbox, sentBox, loading, errors } = useSelector((state) => state.message);
 
     useEffect(() => {
         if (view === "inbox") {
             dispatch(messageActions.getUserInbox());
         } else if (view === "sent") {
             dispatch(messageActions.getUserSentBox());
-        } else if (view === "delete") {
-            dispatch(messageActions.getDeletedMessages())
         }
     }, [dispatch, view]);
 
-    const messages = view === "inbox" 
-        ? inbox 
-        : view === "sent" 
-        ? sentBox
-        : deleteBox;
+    const messages = view === "inbox" ? inbox : sentBox;
 
     const handleSendMessage = () => {
         setModalContent(<SendMessageModal closeModal={() => setModalContent(null)}/>);
@@ -94,26 +88,12 @@ const UserInboxPage = () => {
                         <button onClick={() => setView("sent")} className={box.button}>
                             Sent
                         </button>
-                        <button onClick={() => setView("delete")} className={box.button}>
-                            Deleted
+                        <button onClick={() => window.alert("Feature coming soon!")}className={box.button}>
+                            Friends
                         </button>
                     </div>
 
                     <div className={box.messageContainer}>
-                        {view === "delete" && (
-                            <button
-                                className={box.deleteAllButton}
-                                onClick={() => window.alert('Feature coming soon!')}
-                            >
-                                Delete All
-                            </button>
-                            // <button
-                            //     className={box.deleteAllButton}
-                            //     onClick={handleCleanupDeleted}
-                            // >
-                            //     Delete All
-                            // </button>
-                        )}
                         {messages && messages.length > 0 ? (
                             messages.map((message) => (
                                 <div 

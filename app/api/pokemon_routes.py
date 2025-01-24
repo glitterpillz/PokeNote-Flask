@@ -71,7 +71,7 @@ def search_pokemon():
             return {'error': 'Pokemon not found'}, 404
         return jsonify({"Pokemon": [pokemon.to_dict()]})
     
-    pokemons = Pokemon.query.filter(Pokemon.name.like(f"%{search_query}%")).all()
+    pokemons = Pokemon.query.filter(Pokemon.name.ilike(f"%{search_query}%")).all()
     
     if not pokemons:
         return {'error': 'No Pokémon found'}, 404

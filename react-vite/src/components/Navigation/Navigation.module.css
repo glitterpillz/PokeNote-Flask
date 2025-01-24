@@ -134,3 +134,22 @@
 .dropButton:hover {
   color: #8cfbeb;
 }
+
+.footContainer {
+  justify-self: center;
+  position: relative;
+  top: 300px;
+  display: flex;
+  gap: 20px;
+}
+
+.footContainer button {
+  background-color: transparent;
+  border: none;
+  color: #fefbe2;
+}
+
+.footContainer button:hover {
+  color: #8cfbeb;
+  cursor: pointer;
+}

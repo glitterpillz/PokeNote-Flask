@@ -5,6 +5,7 @@ import nav from "./Navigation.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { login } from "../../redux/session"; 
 import { useNavigate } from "react-router-dom";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Navigation() {
   const [isSidePanelOpen, setIsSidePanelOpen] = useState(false);
@@ -103,6 +104,28 @@ function Navigation() {
               </p>
             </li>
           </ul>
+          <div className={nav.footContainer}>
+            <a
+              className={nav.linkButtonContainer}
+              href="https://www.linkedin.com/in/karen-hickey-a2a193341"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className={nav.linkedin}>
+                <FaLinkedin size={30} />
+              </button>
+            </a>
+            <a
+              className={nav.linkButtonContainer}
+              href="https://github.com/glitterpillz"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className={nav.github}>
+                <FaGithub size={30} />
+              </button>
+            </a>
+          </div>
         </nav>
       </div>
 
