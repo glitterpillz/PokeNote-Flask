@@ -112,7 +112,7 @@ const UserAccountPage = () => {
                     ))}
                 </div>
               ) : (
-                <p className={acc.noEntries}>No Pokémon in collection.</p>
+                <p className={acc.noEntries}>Choose up to 6 Pokémon from your collection.</p>
               )}
             </div>
             <div className={acc.linkContainer}>
